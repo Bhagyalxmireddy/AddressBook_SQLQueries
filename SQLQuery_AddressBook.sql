@@ -42,3 +42,6 @@ DELETE FROM Address_Book WHERE FirstName = 'SriCharitha';
 
 --UC6-Retreving The Persons By City OR State 
 Select * From Address_Book WHERE City = 'Emjal' or State = 'AP';
+
+--UC7-Ability To get the count by city and state
+select COUNT(State) From Address_Book WHERE City = 'Emjal' And State ='UP';
