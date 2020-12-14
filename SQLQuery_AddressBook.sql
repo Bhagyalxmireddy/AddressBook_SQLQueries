@@ -40,4 +40,5 @@ UPDATE Address_Book set Address = 'Thimmajipet' WHERE FirstName = 'Bhagyalaxmi';
 DELETE FROM Address_Book WHERE FirstName = 'SriCharitha';
 
 
-
+--UC6-Retreving The Persons By City OR State 
+Select * From Address_Book WHERE City = 'Emjal' or State = 'AP';
