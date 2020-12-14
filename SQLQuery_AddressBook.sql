@@ -45,3 +45,6 @@ Select * From Address_Book WHERE City = 'Emjal' or State = 'AP';
 
 --UC7-Ability To get the count by city and state
 select COUNT(State) From Address_Book WHERE City = 'Emjal' And State ='UP';
+
+--UC8-Retrieve sortedBy alphabetically By Name For City
+select * From Address_Book Where State = 'AP' ORDER BY FirstName;
