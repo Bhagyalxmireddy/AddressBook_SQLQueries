@@ -28,5 +28,7 @@ INSERT INTO Address_Book(FirstName, LastName,Address,City,State,Zip, PhoneNumber
 VALUES ('SriCharitha', 'Reddy','jcl','Klky','TS','500004','8464096413','Sricharitha@gmail.com'),
 			('Rishitha','Reddy','BNReddy','Emjal','UP','500005','9874563210','rishitha123@gmail.com');
 
-			
+--UC4-Editing The Details
+
+UPDATE Address_Book set Address = 'Thimmajipet' WHERE FirstName = 'Bhagyalaxmi';
 
