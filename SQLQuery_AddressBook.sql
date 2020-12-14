@@ -19,6 +19,9 @@ select * from Address_Book;
 --UC3-Inserting the values Into Table
 INSERT INTO Address_Book(FirstName, LastName,Address,City,State,Zip,Email)
 VALUES ('Sravani', 'Sabbisetti','gandhiChock','Vijayawada','AP','500001','Sravani11@gmail.com');
+INSERT INTO Address_Book(FirstName, LastName,Address,City,State,Zip,PhoneNumber,Email)
+VALUES ('Bala', 'Myakala','TKr','Vijaywada','AP','500001','7801092129','Bala@gmail.com');
+UPDATE Address_Book set City = 'Vijayawada' WHERE FirstName = 'Bala';
 UPDATE Address_Book set PhoneNumber = '8520147963' WHERE FirstName = 'Sravani';
 INSERT INTO Address_Book(FirstName, LastName,Address,City,State,Zip, PhoneNumber, Email)
 VALUES ('Tejaswini', 'Kulkarni','Ngkl','Mumbai','MR','500002','9874102563','Teja123@gmail.com');
@@ -31,4 +34,10 @@ VALUES ('SriCharitha', 'Reddy','jcl','Klky','TS','500004','8464096413','Srichari
 --UC4-Editing The Details
 
 UPDATE Address_Book set Address = 'Thimmajipet' WHERE FirstName = 'Bhagyalaxmi';
+
+--UC5-Deleting The Person
+
+DELETE FROM Address_Book WHERE FirstName = 'SriCharitha';
+
+
 
