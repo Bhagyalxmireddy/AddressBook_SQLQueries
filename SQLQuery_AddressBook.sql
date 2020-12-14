@@ -32,13 +32,10 @@ VALUES ('SriCharitha', 'Reddy','jcl','Klky','TS','500004','8464096413','Srichari
 			('Rishitha','Reddy','BNReddy','Emjal','UP','500005','9874563210','rishitha123@gmail.com');
 
 --UC4-Editing The Details
-
 UPDATE Address_Book set Address = 'Thimmajipet' WHERE FirstName = 'Bhagyalaxmi';
 
 --UC5-Deleting The Person
-
 DELETE FROM Address_Book WHERE FirstName = 'SriCharitha';
-
 
 --UC6-Retreving The Persons By City OR State 
 Select * From Address_Book WHERE City = 'Emjal' or State = 'AP';
