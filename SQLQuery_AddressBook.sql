@@ -46,7 +46,6 @@ select COUNT(State) From Address_Book WHERE City = 'Emjal' And State ='UP';
 --UC8-Retrieve sortedBy alphabetically By Name For City
 select * From Address_Book Where State = 'AP' ORDER BY FirstName;
 
-
 select * From Address_Book;
 
 --UC9-creating the tables and maintaining the relationships
@@ -79,12 +78,23 @@ values(1,2),
 	(6,2);
 
 --UC10_Get the count by Type
-Select Count(ID) from AddressBook_Type Where RelationShip_ID = '1' Group By RelationShip_ID;
-Select Count(ID) from AddressBook_Type Where RelationShip_ID = '2' Group By RelationShip_ID;
-Select Count(ID) from AddressBook_Type Where RelationShip_ID = '3' Group By RelationShip_ID;
+
+select RelationShip_name,COUNT(AddType.Relationship_ID) as Count_persons from AddressBook_Type AddType 
+inner join RelationShip_Type relation
+on AddType.RelationShip_ID = relation.Relationship_ID
+group by RelationShip_name;
+
+Select Count(ID) from AddressBook_Type Group By RelationShip_ID;
+Select Count(ID) from AddressBook_Type Where RelationShip_ID = '2' ;
+Select Count(ID) from AddressBook_Type Where RelationShip_ID = '3' ;
 
 --UC11-Adding the same person to different Types
 Insert into AddressBook_Type(ID,RelationShip_ID)
 values(6,1);
 
 --UC12-Creating ERDiagram
+
+--UC13-Redoing the CURD operations
+Select * From Address_Book WHERE City = 'Emjal' or State = 'AP';
+select COUNT(State) From Address_Book WHERE City = 'Emjal' And State ='UP';
+select * From Address_Book Where State = 'AP' ORDER BY FirstName;
