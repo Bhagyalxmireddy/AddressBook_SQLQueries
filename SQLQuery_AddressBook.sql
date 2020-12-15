@@ -82,3 +82,7 @@ values(1,2),
 Select Count(ID) from AddressBook_Type Where RelationShip_ID = '1' Group By RelationShip_ID;
 Select Count(ID) from AddressBook_Type Where RelationShip_ID = '2' Group By RelationShip_ID;
 Select Count(ID) from AddressBook_Type Where RelationShip_ID = '3' Group By RelationShip_ID;
+
+--UC11-Adding the same person to different Types
+Insert into AddressBook_Type(ID,RelationShip_ID)
+values(6,1);
