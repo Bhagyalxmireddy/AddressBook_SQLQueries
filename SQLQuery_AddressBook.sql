@@ -45,3 +45,40 @@ select COUNT(State) From Address_Book WHERE City = 'Emjal' And State ='UP';
 
 --UC8-Retrieve sortedBy alphabetically By Name For City
 select * From Address_Book Where State = 'AP' ORDER BY FirstName;
+
+
+select * From Address_Book;
+
+Alter Table Address_Book 
+ADD Type varchar(50);
+
+	
+select * from Address_Book;
+
+Create Table RelationShip_Type(
+ Relationship_ID int Identity(1,1) primary Key,
+ RelationShip_name varchar(50),
+ );
+
+ select * from RelationShip_Type;
+
+ create Table AddressBook_Type(
+	ID int,
+	RelationShip_ID int,
+	constraint AddressBook_Type_fk Foreign key(ID) references Address_Book(ID),   
+	constraint AddressBook_Type_fk1 Foreign key(RelationShip_ID) references RelationShip_Type(RelationShip_ID),
+ );
+
+select * from AddressBook_Type;
+
+Insert into RelationShip_Type(RelationShip_name)
+ values('Family'),
+		('Friends'),
+		('Profession');
+
+Insert into AddressBook_Type(ID,RelationShip_ID)
+values(1,2),
+	(2,3),
+	(3,1),
+	(5,1),
+	(6,2);
