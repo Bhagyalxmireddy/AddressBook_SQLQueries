@@ -49,12 +49,7 @@ select * From Address_Book Where State = 'AP' ORDER BY FirstName;
 
 select * From Address_Book;
 
-Alter Table Address_Book 
-ADD Type varchar(50);
-
-	
-select * from Address_Book;
-
+--UC9-creating the tables and maintaining the relationships
 Create Table RelationShip_Type(
  Relationship_ID int Identity(1,1) primary Key,
  RelationShip_name varchar(50),
@@ -82,3 +77,8 @@ values(1,2),
 	(3,1),
 	(5,1),
 	(6,2);
+
+--UC10_Get the count by Type
+Select Count(ID) from AddressBook_Type Where RelationShip_ID = '1' Group By RelationShip_ID;
+Select Count(ID) from AddressBook_Type Where RelationShip_ID = '2' Group By RelationShip_ID;
+Select Count(ID) from AddressBook_Type Where RelationShip_ID = '3' Group By RelationShip_ID;
